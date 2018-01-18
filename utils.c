@@ -32,4 +32,25 @@ int arrayPeriod(int *array, int size)
     return size;
 }
 
-
+/**
+* @brief Prints the content of memory. 
+* This function prints content of memory with size \e size, starting from 
+* address \e addr.
+* @param[in] addr is pointer to starting position of memory segment being printed. 
+* @param[in] size is the length of memory segment being printed.
+* @param[out] None.
+*/
+void printBytes(void* addr, unsigned short size)
+{
+	unsigned short i;
+	unsigned char *pc = (unsigned char *)addr;
+	
+	printf("[ ");
+	for(i = 0; i < size; i++)
+	{
+		printf("%02X ", pc[i]);
+		if(i%4 == 3 && i != size - 1)
+			printf("]\n[ ");		
+	}
+	printf("]\n");
+}
