@@ -74,3 +74,23 @@ void printBytes(void* addr, unsigned short size)
 	}
 	printf("]\n");
 }
+
+/**
+* @brief Checks if number is palindromic. 
+* This function prints checks if number is palindromic, that is if it can be written
+* the same either forwards or backwards.
+* @param[in] num is natural number being tested for palindromic characteristic.
+* @param[out] Flag indicating if number is palindromic.
+*/
+char isPalindromic(long num)
+{
+	long k = num, m = k%10;
+	
+	while(k /= 10)
+		m = m*10 + k%10;
+	
+	if(m == num)
+		return 1;
+	
+	return 0;
+}

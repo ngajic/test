@@ -4,5 +4,6 @@
 char isPrime(long);
 int arrayPeriod(int*, int);
 void printBytes(void* , unsigned short);
+char isPalindrome(long);
 
 #endif
