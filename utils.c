@@ -1,7 +1,9 @@
+#include <math.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
-#include <math.h>
-#include <utils.h>
+
+#include "utils.h"
 
 /**
 * @brief Checks if it is a prime number.
